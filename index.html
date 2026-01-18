@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Laundry - Laundry Ramah Lingkungan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("v3L5gK7sR9mP2jH1"); // Init placeholder
+        })();
+    </script>
+</head>
+<body>
+    <!-- ========== CUSTOM CURSOR ESTETIK ========== -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+    
+    <!-- ========== BACKGROUND DAUN ANIMASI ========== -->
+    <div class="leaf-animation-container">
+        <!-- 30 DAUN ANIMASI -->
+        <div class="leaf l1"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l2"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l3"><i class="fas fa-seedling"></i></div>
+        <div class="leaf l4"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l5"><i class="fas fa-spa"></i></div>
+        <div class="leaf l6"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l7"><i class="fas fa-seedling"></i></div>
+        <div class="leaf l8"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l9"><i class="fas fa-spa"></i></div>
+        <div class="leaf l10"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l11"><i class="fas fa-seedling"></i></div>
+        <div class="leaf l12"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l13"><i class="fas fa-spa"></i></div>
+        <div class="leaf l14"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l15"><i class="fas fa-seedling"></i></div>
+        <div class="leaf l16"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l17"><i class="fas fa-spa"></i></div>
+        <div class="leaf l18"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l19"><i class="fas fa-seedling"></i></div>
+        <div class="leaf l20"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l21"><i class="fas fa-spa"></i></div>
+        <div class="leaf l22"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l23"><i class="fas fa-seedling"></i></div>
+        <div class="leaf l24"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l25"><i class="fas fa-spa"></i></div>
+        <div class="leaf l26"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l27"><i class="fas fa-seedling"></i></div>
+        <div class="leaf l28"><i class="fas fa-leaf"></i></div>
+        <div class="leaf l29"><i class="fas fa-spa"></i></div>
+        <div class="leaf l30"><i class="fas fa-leaf"></i></div>
+    </div>
+    
+    <!-- ========== LOADING SCREEN ========== -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="leaf-loader">
+                <div class="leaf-spin"><i class="fas fa-leaf"></i></div>
+                <div class="leaf-spin reverse"><i class="fas fa-leaf"></i></div>
+                <div class="leaf-spin delayed"><i class="fas fa-leaf"></i></div>
+            </div>
+            <h2 class="loading-text">Green Laundry <span class="loading-dots">.</span><span class="loading-dots">.</span><span class="loading-dots">.</span></h2>
+            <p class="loading-sub">Memuat Pengalaman Laundry Alam</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-tip"><i class="fas fa-lightbulb"></i> Tip: Order sekarang dapat diskon 15%!</p>
+        </div>
+    </div>
+    
+    <!-- ========== HEADER & NAVBAR ========== -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="logo-circle">
+                    <i class="fas fa-leaf logo-main"></i>
+                    <div class="logo-ring"></div>
+                    <div class="logo-ring delayed"></div>
+                </div>
+                <div class="brand-text">
+                    <h1 class="brand-title">GREEN <span class="highlight">LAUNDRY</span></h1>
+                    <p class="brand-tag"><i class="fas fa-heart"></i> Hijau · Bersih · Wangi Alami</p>
+                </div>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li class="nav-item"><a href="#services" class="nav-link"><i class="fas fa-concierge-bell"></i> <span>Layanan</span></a></li>
+                <li class="nav-item"><a href="#order" class="nav-link"><i class="fas fa-shopping-basket"></i> <span>Order</span></a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link"><i class="fas fa-tags"></i> <span>Harga</span></a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link"><i class="fas fa-comment-dots"></i> <span>Testimoni</span></a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i> <span>Kontak</span></a></li>
+                <li class="nav-item special-item"><a href="#admin" class="nav-link admin-btn" id="adminBtn"><i class="fas fa-cogs"></i> <span>Panel Admin</span></a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="cart-toggle" id="cartToggle" title="Keranjang Order">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- CART SIDEBAR -->
+        <div class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-basket"></i> Keranjang Order</h3>
+                <button class="cart-close" id="cartClose">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Items akan diisi JS -->
+                <div class="cart-empty">
+                    <i class="fas fa-basket-shopping"></i>
+                    <p>Keranjang masih kosong</p>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalAmount">Rp 0</span>
+                </div>
+                <button class="checkout-btn" id="cartCheckout">
+                    <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text animate__animated animate__fadeInUp">
+                <h2 class="hero-title">Laundry <span class="highlight-green">Ramah Lingkungan</span> Pertama di Indonesia</h2>
+                <p class="hero-desc">Menggunakan deterjen alami 100%, energi terbarukan, dan kemasan daur ulang biodegradable. Memberikan kebersihan maksimal dengan dampak minimal pada bumi.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 data-count="100">0</h3>
+                            <p>Deterjen Alami</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 data-count="80">0</h3>
+                            <p>Energi Matahari</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 data-count="95">0</h3>
+                            <p>Kemasan Daur Ulang</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 data-count="1500">0</h3>
+                            <p>Pelanggan Bahagia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#order" class="btn-primary">
+                        <i class="fas fa-bolt"></i> Order Sekarang
+                    </a>
+                    <a href="#services" class="btn-secondary">
+                        <i class="fas fa-info-circle"></i> Lihat Layanan
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="floating-laundry">
+                    <div class="laundry-item shirt animate-float">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="laundry-item pants animate-float delayed">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="laundry-item dress animate-float more-delayed">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="laundry-item sock animate-float">
+                        <i class="fas fa-socks"></i>
+                    </div>
+                </div>
+                <div class="hero-bubble">
+                    <div class="bubble b1">Bersih</div>
+                    <div class="bubble b2">Wangi</div>
+                    <div class="bubble b3">Rapi</div>
+                    <div class="bubble b4">Hijau</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll untuk eksplorasi</p>
+        </div>
+        
+        <!-- PROMO BANNER -->
+        <div class="promo-banner">
+            <div class="promo-content">
+                <span class="promo-badge"><i class="fas fa-fire"></i> PROMO</span>
+                <span class="promo-text">Diskon 20% untuk order pertama! Gunakan kode: <strong>GREEN20</strong></span>
+                <a href="#order" class="promo-btn">Klaim Sekarang <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========== LAYANAN SECTION ========== -->
+    <section class="services-section" id="services">
+        <div class="section-header">
+            <h2 class="section-title">Layanan <span class="green-text">Premium</span> Kami</h2>
+            <p class="section-sub">Berbagai pilihan laundry dengan standar kualitas terbaik dan ramah lingkungan</p>
+            <div class="title-decoration">
+                <div class="line"></div>
+                <i class="fas fa-leaf"></i>
+                <div class="line"></div>
+            </div>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tshirt"></i>
+                    <div class="icon-bg"></div>
+                    <div class="icon-pulse"></div>
+                </div>
+                <h3 class="service-title">Laundry Reguler</h3>
+                <p class="service-desc">Cuci kering, setrika rapi, packing aman dengan deterjen alami.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Deterjen alami 100%</li>
+                    <li><i class="fas fa-check-circle"></i> Pewangi pilihan</li>
+                    <li><i class="fas fa-check-circle"></i> Packing rapi</li>
+                    <li><i class="fas fa-check-circle"></i> Selesai 2 hari</li>
+                </ul>
+                <div class="service-price">
+                    <span class="price">Rp 7.000</span>
+                    <span class="unit">/kg</span>
+                    <span class="badge">Populer</span>
+                </div>
+                <button class="service-order" data-service="Laundry Reguler" data-price="7000">
+                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                </button>
+            </div>
+            
+            <!-- Service Card 2 -->
+            <div class="service-card featured">
+                <div class="featured-badge"><i class="fas fa-crown"></i> TERLARIS</div>
+                <div class="service-icon">
+                    <i class="fas fa-gem"></i>
+                    <div class="icon-bg"></div>
+                    <div class="icon-pulse"></div>
+                </div>
+                <h3 class="service-title">Laundry Express</h3>
+                <p class="service-desc">Selesai dalam 6 jam! Prioritas tinggi dengan kualitas maksimal.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Selesai 6 jam</li>
+                    <li><i class="fas fa-check-circle"></i> Prioritas tinggi</li>
+                    <li><i class="fas fa-check-circle"></i> Free pickup</li>
+                    <li><i class="fas fa-check-circle"></i> Garansi puas</li>
+                </ul>
+                <div class="service-price">
+                    <span class="price">Rp 15.000</span>
+                    <span class="unit">/kg</span>
+                    <span class="badge discount">-15%</span>
+                </div>
+                <button class="service-order" data-service="Laundry Express" data-price="15000">
+                    <i class="fas fa-bolt"></i> Pesan Cepat
+                </button>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-bed"></i>
+                    <div class="icon-bg"></div>
+                    <div class="icon-pulse"></div>
+                </div>
+                <h3 class="service-title">Laundry Bed Cover</h3>
+                <p class="service-desc">Spesial untuk bed cover, sprei, selimut dengan mesin besar.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Mesin besar khusus</li>
+                    <li><i class="fas fa-check-circle"></i> Setrika uap</li>
+                    <li><i class="fas fa-check-circle"></i> Packing vacuum</li>
+                    <li><i class="fas fa-check-circle"></i> Anti bakteri</li>
+                </ul>
+                <div class="service-price">
+                    <span class="price">Rp 35.000</span>
+                    <span class="unit">/buah</span>
+                </div>
+                <button class="service-order" data-service="Laundry Bed Cover" data-price="35000">
+                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                </button>
+            </div>
+            
+            <!-- Service Card 4 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tshirt"></i>
+                    <div class="icon-bg"></div>
+                    <div class="icon-pulse"></div>
+                </div>
+                <h3 class="service-title">Dry Cleaning</h3>
+                <p class="service-desc">Khusus pakaian premium seperti jas, dress, dan bahan khusus.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Bahan khusus</li>
+                    <li><i class="fas fa-check-circle"></i> Teknologi dry clean</li>
+                    <li><i class="fas fa-check-circle"></i> Setrika profesional</li>
+                    <li><i class="fas fa-check-circle"></i> Packaging eksklusif</li>
+                </ul>
+                <div class="service-price">
+                    <span class="price">Rp 25.000</span>
+                    <span class="unit">/buah</span>
+                </div>
+                <button class="service-order" data-service="Dry Cleaning" data-price="25000">
+                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                </button>
+            </div>
+            
+            <!-- Service Card 5 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shoe-prints"></i>
+                    <div class="icon-bg"></div>
+                    <div class="icon-pulse"></div>
+                </div>
+                <h3 class="service-title">Laundry Sepatu</h3>
+                <p class="service-desc">Cuci sepatu premium dengan teknik khusus dan bahan aman.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Teknik khusus</li>
+                    <li><i class="fas fa-check-circle"></i> Bahan aman</li>
+                    <li><i class="fas fa-check-circle"></i> Brush premium</li>
+                    <li><i class="fas fa-check-circle"></i> Packaging box</li>
+                </ul>
+                <div class="service-price">
+                    <span class="price">Rp 40.000</span>
+                    <span class="unit">/pasang</span>
+                </div>
+                <button class="service-order" data-service="Laundry Sepatu" data-price="40000">
+                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                </button>
+            </div>
+            
+            <!-- Service Card 6 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-infinity"></i>
+                    <div class="icon-bg"></div>
+                    <div class="icon-pulse"></div>
+                </div>
+                <h3 class="service-title">Paket Bulanan</h3>
+                <p class="service-desc">Langganan bulanan dengan harga spesial dan banyak benefit.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check-circle"></i> Free pickup 20x</li>
+                    <li><i class="fas fa-check-circle"></i> Diskon 30%</li>
+                    <li><i class="fas fa-check-circle"></i> Priority service</li>
+                    <li><i class="fas fa-check-circle"></i> Free treatment</li>
+                </ul>
+                <div class="service-price">
+                    <span class="price">Rp 299.000</span>
+                    <span class="unit">/bulan</span>
+                    <span class="badge">Hemat</span>
+                </div>
+                <button class="service-order" data-service="Paket Bulanan" data-price="299000">
+                    <i class="fas fa-calendar-check"></i> Langganan Sekarang
+                </button>
+            </div>
+        </div>
+        
+        <div class="services-note">
+            <p><i class="fas fa-info-circle"></i> Semua layanan menggunakan <strong>deterjen alami 100%</strong> dan <strong>kemasan biodegradable</strong></p>
+        </div>
+    </section>
+    
+    <!-- ========== ORDER SECTION ========== -->
+    <section class="order-section" id="order">
+        <div class="section-header">
+            <h2 class="section-title">Form <span class="green-text">Pemesanan</span></h2>
+            <p class="section-sub">Isi form berikut untuk pemesanan laundry - Langsung terhubung ke WhatsApp kami</p>
+            <div class="title-decoration">
+                <div class="line"></div>
+                <i class="fas fa-shopping-cart"></i>
+                <div class="line"></div>
+            </div>
+        </div>
+        
+        <div class="order-container">
+            <!-- ORDER FORM -->
+            <div class="order-form-wrapper">
+                <div class="form-header">
+                    <h3><i class="fas fa-edit"></i> Data Pemesanan</h3>
+                    <p class="form-sub">Isi dengan data yang valid untuk proses yang lancar</p>
+                </div>
+                
+                <form id="orderForm" class="order-form">
+                    <div class="form-grid">
+                        <!-- Nama -->
+                        <div class="form-group">
+                            <label for="customerName"><i class="fas fa-user"></i> Nama Lengkap *</label>
+                            <input type="text" id="customerName" placeholder="Masukkan nama lengkap" required>
+                            <div class="form-hint">Contoh: Budi Santoso</div>
+                        </div>
+                        
+                        <!-- No HP -->
+                        <div class="form-group">
+                            <label for="customerPhone"><i class="fas fa-phone"></i> Nomor WhatsApp *</label>
+                            <input type="tel" id="customerPhone" placeholder="0812xxxxxxx" required>
+                            <div class="form-hint">Contoh: 081250525043</div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="customerEmail"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="customerEmail" placeholder="email@contoh.com" value="rizalakunsup6@gmail.com">
+                            <div class="form-hint">Untuk notifikasi order</div>
+                        </div>
+                        
+                        <!-- Alamat -->
+                        <div class="form-group full-width">
+                            <label for="customerAddress"><i class="fas fa-home"></i> Alamat Lengkap *</label>
+                            <textarea id="customerAddress" rows="3" placeholder="Jl. Contoh No. 123, Kota" required></textarea>
+                            <div class="form-hint">Detail alamat untuk pickup/delivery</div>
+                        </div>
+                        
+                        <!-- Layanan -->
+                        <div class="form-group">
+                            <label for="serviceType"><i class="fas fa-concierge-bell"></i> Jenis Layanan *</label>
+                            <select id="serviceType" required>
+                                <option value="">Pilih layanan...</option>
+                                <option value="Laundry Reguler">Laundry Reguler - Rp 7.000/kg</option>
+                                <option value="Laundry Express">Laundry Express - Rp 15.000/kg</option>
+                                <option value="Laundry Bed Cover">Laundry Bed Cover - Rp 35.000/buah</option>
+                                <option value="Dry Cleaning">Dry Cleaning - Rp 25.000/buah</option>
+                                <option value="Laundry Sepatu">Laundry Sepatu - Rp 40.000/pasang</option>
+                                <option value="Paket Bulanan">Paket Bulanan - Rp 299.000/bulan</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Berat/Jumlah -->
+                        <div class="form-group">
+                            <label for="quantity"><i class="fas fa-weight"></i> Berat/Jumlah *</label>
+                            <div class="quantity-control">
+                                <button type="button" class="qty-btn minus">-</button>
+                                <input type="number" id="quantity" min="1" max="100" value="1" step="0.5">
+                                <button type="button" class="qty-btn plus">+</button>
+                                <span class="qty-unit" id="qtyUnit">kg</span>
+                            </div>
+                            <div class="form-hint">Gunakan .5 untuk setengah kg</div>
+                        </div>
+                        
+                        <!-- Tanggal Pickup -->
+                        <div class="form-group">
+                            <label for="pickupDate"><i class="fas fa-calendar-alt"></i> Tanggal Pickup</label>
+                            <input type="date" id="pickupDate">
+                        </div>
+                        
+                        <!-- Waktu Pickup -->
+                        <div class="form-group">
+                            <label for="pickupTime"><i class="fas fa-clock"></i> Waktu Pickup</label>
+                            <select id="pickupTime">
+                                <option value="08:00-12:00">08:00 - 12:00</option>
+                                <option value="12:00-16:00">12:00 - 16:00</option>
+                                <option value="16:00-20:00">16:00 - 20:00</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Catatan -->
+                        <div class="form-group full-width">
+                            <label for="orderNotes"><i class="fas fa-sticky-note"></i> Catatan Khusus</label>
+                            <textarea id="orderNotes" rows="3" placeholder="Catatan tambahan: noda khusus, alergi deterjen, dll."></textarea>
+                        </div>
+                        
+                        <!-- Promo Code -->
+                        <div class="form-group">
+                            <label for="promoCode"><i class="fas fa-tag"></i> Kode Promo</label>
+                            <div class="promo-input-group">
+                                <input type="text" id="promoCode" placeholder="Masukkan kode">
+                                <button type="button" class="promo-apply" id="applyPromo">Apply</button>
+                            </div>
+                            <div class="promo-valid" id="promoStatus"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-reset" id="resetForm">
+                            <i class="fas fa-redo"></i> Reset Form
+                        </button>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Generate WhatsApp Order
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- ORDER SUMMARY -->
+            <div class="order-summary">
+                <div class="summary-header">
+                    <h3><i class="fas fa-receipt"></i> Ringkasan Order</h3>
+                    <button class="summary-clear" id="clearCart">
+                        <i class="fas fa-trash"></i> Hapus Semua
+                    </button>
+                </div>
+                
+                <div class="summary-items" id="summaryItems">
+                    <div class="empty-summary">
+                        <i class="fas fa-clipboard-list"></i>
+                        <p>Belum ada item dalam keranjang</p>
+                        <p class="small">Pilih layanan atau isi form</p>
+                    </div>
+                </div>
+                
+                <div class="summary-table">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotalAmount">Rp 0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Diskon:</span>
+                        <span id="discountAmount">Rp 0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Biaya Admin:</span>
+                        <span id="adminFee">Rp 2.000</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total Pembayaran:</span>
+                        <span id="totalAmount">Rp 2.000</span>
+                    </div>
+                </div>
+                
+                <div class="summary-features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Garansi Kepuasan</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <span>Ramah Lingkungan</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Tepat Waktu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- WA ORDER BUTTON BESAR -->
+        <div class="wa-order-container">
+            <div class="wa-card">
+                <div class="wa-icon">
+                    <i class="fab fa-whatsapp"></i>
+                    <div class="wa-pulse"></div>
+                    <div class="wa-pulse delayed"></div>
+                </div>
+                <div class="wa-info">
+                    <h3>Order Langsung via WhatsApp</h3>
+                    <p>Klik tombol dibawah untuk mengirim order langsung ke WhatsApp kami. Data dari form akan otomatis terisi!</p>
+                    <div class="wa-details">
+                        <div class="detail">
+                            <i class="fas fa-user-check"></i>
+                            <span>Respon Cepat (1-5 menit)</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-lock"></i>
+                            <span>Data Aman & Privat</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-bolt"></i>
+                            <span>Konfirmasi Instant</span>
+                        </div>
+                    </div>
+                    <p class="wa-number">
+                        <i class="fas fa-phone-alt"></i> 
+                        <strong>0812-5052-5043</strong>
+                        <span class="wa-status" id="waStatus">● Online</span>
+                    </p>
+                </div>
+                <a href="#" id="waOrderLink" target="_blank" class="wa-button">
+                    <i class="fab fa-whatsapp"></i> 
+                    <span>ORDER SEKARANG VIA WHATSAPP</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========== TABEL ORDER ESTETIK ========== -->
+    <section class="table-section" id="orderHistory">
+        <div class="table-container">
+            <div class="table-header">
+                <h2 class="table-title"><i class="fas fa-history"></i> Riwayat <span class="green-text">Order</span></h2>
+                <div class="table-actions">
+                    <button class="table-btn" id="refreshTable">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                    <button class="table-btn" id="exportTable">
+                        <i class="fas fa-download"></i> Export
+                    </button>
+                    <div class="table-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Cari order..." id="tableSearch">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="order-table" id="orderTable">
+                    <thead>
+                        <tr>
+                            <th class="sticky-header"><i class="fas fa-hashtag"></i> ID</th>
+                            <th class="sticky-header"><i class="fas fa-user"></i> Nama</th>
+                            <th class="sticky-header"><i class="fas fa-concierge-bell"></i> Layanan</th>
+                            <th class="sticky-header"><i class="fas fa-weight"></i> Berat</th>
+                            <th class="sticky-header"><i class="fas fa-money-bill-wave"></i> Total</th>
+                            <th class="sticky-header"><i class="fas fa-calendar"></i> Tanggal</th>
+                            <th class="sticky-header"><i class="fas fa-battery"></i> Status</th>
+                            <th class="sticky-header"><i class="fas fa-cogs"></i> Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderTableBody">
+                        <!-- Data akan diisi oleh JavaScript -->
+                        <tr class="empty-row">
+                            <td colspan="8">
+                                <div class="empty-table">
+                                    <i class="fas fa-inbox"></i>
+                                    <p>Belum ada riwayat order</p>
+                                    <p class="small">Order pertama Anda akan muncul di sini</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="8">
+                                <div class="table-footer">
+                                    <div class="table-info">
+                                        <span id="rowCount">0</span> order ditemukan
+                                    </div>
+                                    <div class="table-pagination" id="tablePagination">
+                                        <button class="page-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                                        <span class="page-current">1</span>
+                                        <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            
+            <div class="table-stats">
+                <div class="stat">
+                    <div class="stat-label">Total Order</div>
+                    <div class="stat-value" id="totalOrders">0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Total Pendapatan</div>
+                    <div class="stat-value" id="totalRevenue">Rp 0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Order Hari Ini</div>
+                    <div class="stat-value" id="todayOrders">0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Rata-rata Rating</div>
+                    <div class="stat-value" id="avgRating">5.0 <i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========== KONTAK SECTION ========== -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="section-header">
+                    <h2 class="section-title">Hubungi <span class="green-text">Kami</span></h2>
+                    <p class="section-sub">Siap melayani kebutuhan laundry Anda dengan ramah dan profesional</p>
+                </div>
+                
+                <div class="contact-methods">
+                    <div class="contact-card wa-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <div class="contact-detail">
+                            <h4><i class="fas fa-comment-dots"></i> WhatsApp Order</h4>
+                            <p class="contact-number">0812-5052-5043</p>
+                            <p class="contact-desc">Respon cepat, konfirmasi instant. Untuk order dan konsultasi.</p>
+                            <a href="https://wa.me/6281250525043?text=Halo%20Green%20Laundry,%20saya%20ingin%20konsultasi" target="_blank" class="contact-link">
+                                <i class="fab fa-whatsapp"></i> Chat Sekarang
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card ig-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <div class="contact-detail">
+                            <h4><i class="fas fa-camera"></i> Instagram</h4>
+                            <p class="contact-number">@greenlaundry.official</p>
+                            <p class="contact-desc">Lihat portfolio, testimoni, dan promo terbaru.</p>
+                            <a href="#" class="contact-link" id="igLink">
+                                <i class="fab fa-instagram"></i> Follow & DM
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card email-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <div class="contact-detail">
+                            <h4><i class="fas fa-mail-bulk"></i> Email Official</h4>
+                            <p class="contact-number">rizalakunsup6@gmail.com</p>
+                            <p class="contact-desc">Untuk kerjasama, komplain, dan informasi penting.</p>
+                            <a href="mailto:rizalakunsup6@gmail.com" class="contact-link">
+                                <i class="fas fa-paper-plane"></i> Kirim Email
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-hours">
+                    <h4><i class="fas fa-clock"></i> Jam Operasional</h4>
+                    <div class="hours-grid">
+                        <div class="day">
+                            <span>Senin - Jumat</span>
+                            <span>07:00 - 21:00</span>
+                        </div>
+                        <div class="day">
+                            <span>Sabtu</span>
+                            <span>08:00 - 20:00</span>
+                        </div>
+                        <div class="day">
+                            <span>Minggu</span>
+                            <span>09:00 - 17:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-map">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Lokasi Kami</h3>
+                        <p>Green Laundry Center</p>
+                        <p class="address">Jl. Hijau Bersih No. 123, Kelurahan Sejahtera, Kota Ramah Lingkungan</p>
+                        <div class="map-features">
+                            <div class="feature">
+                                <i class="fas fa-parking"></i>
+                                <span>Parkir Luas</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-wifi"></i>
+                                <span>Free WiFi</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-coffee"></i>
+                                <span>Waiting Lounge</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========== ADMIN PANEL (HIDDEN) ========== -->
+    <div class="admin-overlay" id="adminOverlay"></div>
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-header">
+            <h2><i class="fas fa-cogs"></i> Panel Admin Green Laundry</h2>
+            <button class="admin-close" id="adminClose">&times;</button>
+        </div>
+        
+        <div class="admin-tabs">
+            <button class="admin-tab active" data-tab="dashboard"><i class="fas fa-chart-line"></i> Dashboard</button>
+            <button class="admin-tab" data-tab="orders"><i class="fas fa-shopping-cart"></i> Orders</button>
+            <button class="admin-tab" data-tab="customers"><i class="fas fa-users"></i> Customers</button>
+            <button class="admin-tab" data-tab="settings"><i class="fas fa-sliders-h"></i> Settings</button>
+        </div>
+        
+        <div class="admin-content">
+            <!-- Dashboard Tab Content -->
+            <div class="tab-content active" id="dashboardTab">
+                <!-- Konten dashboard admin -->
+            </div>
+            
+            <!-- Orders Tab Content -->
+            <div class="tab-content" id="ordersTab">
+                <!-- Konten orders admin -->
+            </div>
+            
+            <!-- Customers Tab Content -->
+            <div class="tab-content" id="customersTab">
+                <!-- Konten customers admin -->
+            </div>
+            
+            <!-- Settings Tab Content -->
+            <div class="tab-content" id="settingsTab">
+                <!-- Konten settings admin -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- ========== FOOTER ========== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <div class="footer-leaf">
+                        <i class="fas fa-leaf"></i>
+                        <div class="leaf-rotate"></div>
+                    </div>
+                    <div class="footer-brand">
+                        <h3>GREEN LAUNDRY</h3>
+                        <p class="footer-tag">Laundry dengan hati untuk bumi yang lebih baik.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Layanan</h4>
+                        <a href="#services">Laundry Reguler</a>
+                        <a href="#services">Laundry Express</a>
+                        <a href="#services">Dry Cleaning</a>
+                        <a href="#services">Paket Bulanan</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Perusahaan</h4>
+                        <a href="#about">Tentang Kami</a>
+                        <a href="#testimonials">Testimoni</a>
+                        <a href="#contact">Kontak</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="#privacy">Kebijakan Privasi</a>
+                        <a href="#terms">Syarat & Ketentuan</a>
+                        <a href="#refund">Kebijakan Refund</a>
+                    </div>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Dapatkan promo dan tips laundry langsung di email</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email Anda">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" class="social-icon wa-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-icon ig-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon fb-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon tw-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon yt-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-copy">
+                    <p>&copy; 2024 <strong>Green Laundry</strong>. All rights reserved. | Made with <i class="fas fa-heart"></i> for a cleaner world</p>
+                    <p class="footer-credits">Design by <strong>NOXA AI</strong> | Developed for Acode Environment</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FLOATING ACTION BUTTONS -->
+        <div class="fab-container">
+            <button class="fab-main" id="fabMain">
+                <i class="fas fa-plus"></i>
+            </button>
+            <div class="fab-menu">
+                <button class="fab-item" id="fabWa" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+                <button class="fab-item" id="fabOrder" title="Order Cepat">
+                    <i class="fas fa-bolt"></i>
+                </button>
+                <button class="fab-item" id="fabCall" title="Telepon">
+                    <i class="fas fa-phone"></i>
+                </button>
+                <button class="fab-item" id="fabTop" title="Ke Atas">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ========== MODAL & NOTIFICATION SYSTEM ========== -->
+    <div class="notification-center" id="notificationCenter"></div>
+    
+    <!-- MODAL ORDER SUCCESS -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon success">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Order Berhasil Dibuat!</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Order Anda telah berhasil dibuat. Silakan lanjutkan ke WhatsApp untuk konfirmasi dan pembayaran.</p>
+                <div class="modal-order-id">
+                    <strong>Order ID:</strong> <span id="modalOrderId">GL-0001</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn secondary" id="copyOrderId">
+                    <i class="fas fa-copy"></i> Salin ID
+                </button>
+                <a href="#" class="modal-btn primary" id="modalWaLink" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Buka WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MODAL CONFIRMATION -->
+    <div class="modal" id="confirmModal">
+        <!-- Modal konfirmasi -->
+    </div>
+    
+    <!-- ========== SCRIPTS ========== -->
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
+    <script src="email.js"></script>
+    <script>
+        // Inisialisasi langsung
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Green Laundry Website loaded successfully!');
+            // Init functions akan dipanggil di script.js
+        });
+    </script>
+</body>
+</html>
